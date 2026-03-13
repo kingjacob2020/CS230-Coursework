@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>CS230 Assignment 1</title>
+
+		<link rel="stylesheet" href="styles.css"/>
+	</head>
+
+	<body>
+
+		<header>
+			<h1>My Study Dashboard</h1>
+			<p id="welcome-message"></p>
+
+
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="index.html">Tasks</a>
+				<a href="index.html">Profile</a>
+			</nav>
+		</header>
+
+		<main class="cards">
+
+			<section class="card about-me">
+				<div class="about-text">
+
+					<h2>Jacob</h2>
+
+					<p>
+						I am 19 years old, and I study Computer Science at Maynooth University.
+					</p>
+					<p class="extra-about">
+						I am passionate about web development and enjoy creating interactive user experiences.
+					</p>
+				</div>
+				<img src="images/osaka.webp" alt="Osaka from azumanga daioh" width="200" height="100"/>
+
+
+			</section>
+			<!-- <img src="images/osaka.webp" alt="Osaka from azumanga daioh" width="300" height="200"/> -->
+
+			<section class="card">
+				<h2>Weekly Goals:</h2>
+				<ul>
+					<li>Learn HTML, CSS</li>
+					<li>Learn Java, Python, Javascript.</li>
+					<li>Learn React</li>
+					<li>CS230 Assignment 2</li>
+				</ul>
+
+
+				<div id="dynamic-goals"></div>
+				<button id="show-goals-button">Show goals</button>
+			</section>
+
+
+			<section class="card">
+				<h2>Study Status</h2>
+				<p class="status-text">Status: Active</p>
+
+				<p>Study sessions today:
+					<span id="session-count">0</span>
+				</p>
+				<button id="add-session">Add Session</button>
+				<button id="reset-session">Reset Sessions</button>
+			</section>
+
+		</main>
+
+		<footer>
+			<p>&copy; 2026 Jacob, CS230 Student Dashboard</p>
+            <p>Last update: March 2026, This page is for study tracking</p>
+		</footer>
+		
+		<script src="script.js"></script>
+
+	</body>
+
+</html>
+
