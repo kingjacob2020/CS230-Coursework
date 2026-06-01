@@ -1,0 +1,145 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #555555;
+}
+
+/* page layout and background */
+body {
+    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header and footer styles */
+header,
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* nav styling*/
+nav {
+    margin-top: 10px;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555555;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+/*main layout centering*/
+main{
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*container for apple*/
+.apple-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+/*apple background and layout*/
+.apple {
+    width: 320px;
+    height: 380px;
+    background-image: url("apple.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/*timer styling*/
+#timer {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333333;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    transition: 0.3s;
+}
+
+/*hover effect for timer*/
+#timer:hover {
+    color: yellow;
+}
+
+/*warning for under 15 seconds*/
+.warning{
+    color: red !important;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/*button styling*/
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*button colors*/
+#start{
+    background-color: green;
+}
+
+#stop{
+    background-color: red;
+}
+
+#pause{
+    background-color: orange;
+}
+
+button:hover:not(:disabled) {
+    border: 2px solid black;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 600px) {
+    .apple {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #timer {
+        font-size: 2em;
+    }
+
+    button{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
